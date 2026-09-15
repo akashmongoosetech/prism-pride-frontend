@@ -1,0 +1,6 @@
+{
+  "name": "Prism - LGBTQIA+ Community & Pride Support Platform",
+  "description": "A safe, welcoming, and inclusive community support platform for LGBTQIA+ individuals, offering resources, support groups, Pride events, personal stories, mental health, and crisis support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
