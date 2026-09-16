@@ -39,7 +39,7 @@ export const SupportGroupsPage: React.FC = () => {
   const handleToggleAttendGroup = (groupId: string, groupName: string) => {
     if (!user) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Sign In Required',
         message: 'Please sign in to join support circles and track them in your profile commitments.'
       });
@@ -85,7 +85,7 @@ export const SupportGroupsPage: React.FC = () => {
       const matchSearch =
         g.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         g.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        g.facilitator.toLowerCase().includes(searchQuery.toLowerCase());
+        (typeof g.facilitator === 'string' ? g.facilitator : g.facilitator?.name || '').toLowerCase().includes(searchQuery.toLowerCase());
       return matchCat && matchFormat && matchSearch;
     });
   }, [supportGroups, activeCategory, formatFilter, searchQuery]);
@@ -228,7 +228,7 @@ export const SupportGroupsPage: React.FC = () => {
                   <div><strong>Schedule:</strong> {group.schedule}</div>
                   <div><strong>Format:</strong> {group.meetingFormat}</div>
                   <div><strong>Ages:</strong> {group.ageRange}</div>
-                  <div><strong>Facilitated by:</strong> {group.facilitator}</div>
+                  <div><strong>Facilitated by:</strong> {typeof group.facilitator === 'string' ? group.facilitator : group.facilitator?.name}</div>
                 </div>
               </div>
 

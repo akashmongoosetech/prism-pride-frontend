@@ -25,7 +25,7 @@ export const CommentForm: React.FC<CommentFormProps> = ({
   const { user } = useAuth();
   const { addToast } = useToast();
 
-  const [authorName, setAuthorName] = useState(user?.displayName || '');
+  const [authorName, setAuthorName] = useState(user?.name || '');
   const [pronouns, setPronouns] = useState(user?.pronouns || '');
   const [isAnonymous, setIsAnonymous] = useState(false);
   const [content, setContent] = useState('');

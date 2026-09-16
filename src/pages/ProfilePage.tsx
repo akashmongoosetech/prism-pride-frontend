@@ -445,7 +445,7 @@ END:VCALENDAR`;
                       </div>
                       <div className="flex items-center gap-2 text-slate-400 text-[11px]">
                         <Users className="w-3.5 h-3.5 shrink-0" />
-                        <span>Facilitator: {group.facilitator} • {group.membersCount} members</span>
+                        <span>Facilitator: {typeof group.facilitator === 'string' ? group.facilitator : group.facilitator?.name} • {group.membersCount} members</span>
                       </div>
                     </div>
                   </div>

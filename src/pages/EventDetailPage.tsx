@@ -65,7 +65,7 @@ export const EventDetailPage: React.FC = () => {
   const handleToggleAttend = () => {
     if (!user) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Sign In Required',
         message: 'Please sign in to register for events and view them in your profile commitments.'
       });

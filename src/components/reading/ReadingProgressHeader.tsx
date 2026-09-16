@@ -148,7 +148,7 @@ export const ReadingProgressHeader: React.FC<ReadingProgressHeaderProps> = ({
           {/* Right: Real-time progress status badge */}
           <div className="flex items-center gap-2 self-start sm:self-auto">
             {progress >= 95 ? (
-              <Badge variant="green" className="flex items-center gap-1 py-1 px-3">
+              <Badge variant="success" className="flex items-center gap-1 py-1 px-3">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                 <span>Completed</span>
               </Badge>

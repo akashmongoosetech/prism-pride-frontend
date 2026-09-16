@@ -190,7 +190,7 @@ export const EventsPage: React.FC = () => {
   const handleRSVP = (eventId: string, eventTitle: string) => {
     if (!user) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Sign In Required',
         message: 'Please sign in to register for events and track them in your profile commitments.'
       });

@@ -31,7 +31,7 @@ export const ResourceBookmarkButton: React.FC<ResourceBookmarkButtonProps> = ({
 
     if (!user) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Sign In to Save',
         message: 'Please sign in to save this resource guide to your sanctuary profile.'
       });

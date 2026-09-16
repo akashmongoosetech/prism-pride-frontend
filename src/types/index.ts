@@ -190,6 +190,7 @@ export interface EventItem {
   date: string;
   time: string;
   isOnline: boolean;
+  isVirtual?: boolean;
   location: string;
   virtualLink?: string;
   organizer: string;
@@ -227,7 +228,7 @@ export interface SupportGroup {
     name: string;
     credentials: string;
     avatar: string;
-  };
+  } | string;
   confidentialityLevel: 'High - Anonymous Screen Names Allowed' | 'Standard Safe Space Agreement';
   isAcceptingNewMembers: boolean;
   guidelines: string[];
@@ -247,7 +248,12 @@ export interface BlogPost {
     pronouns: string;
     bio?: string;
     socialLink?: string;
-  };
+  } | string;
+  authorRole?: string;
+  authorPronouns?: string;
+  authorAvatar?: string;
+  authorBio?: string;
+  socialLink?: string;
   publishedAt: string;
   readTime: string;
   category: 'LGBTQIA+ Education' | 'Pride' | 'Health & Wellness' | 'Community' | 'Advocacy' | 'Coming Out';
@@ -266,6 +272,7 @@ export interface Partner {
   websiteUrl: string;
   partnershipSince: string;
   impactMetrics: string;
+  region?: string;
 }
 
 export interface FAQItem {
@@ -300,6 +307,9 @@ export interface CommunityDiscussion {
   repliesCount: number;
   likesCount: number;
   pinned?: boolean;
+  isPinned?: boolean;
+  tags?: string[];
+  lastActivity?: string;
   replies: {
     id: string;
     author: {

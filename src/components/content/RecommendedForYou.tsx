@@ -148,8 +148,8 @@ export const RecommendedForYou: React.FC<RecommendedForYouProps> = ({
               : `/my-story/${(item as Story).id}`;
 
             const authorName = isBlogPost
-              ? typeof (item as BlogPost).author === 'object'
-                ? (item as BlogPost).author.name
+              ? typeof (item as BlogPost).author === 'object' && (item as BlogPost).author !== null
+                ? ((item as BlogPost).author as any).name
                 : String((item as BlogPost).author || 'Prism Editorial')
               : (item as Story).isAnonymous
               ? 'Anonymous Member'

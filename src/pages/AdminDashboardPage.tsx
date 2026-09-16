@@ -461,7 +461,7 @@ export const AdminDashboardPage: React.FC = () => {
                         </div>
                       </td>
                       <td className="p-4">
-                        <Badge variant={s.status === 'active' ? 'success' : 'neutral'}>
+                        <Badge variant={s.status === 'active' ? 'success' : 'default'}>
                           {s.status === 'active' ? 'Active' : 'Unsubscribed'}
                         </Badge>
                       </td>

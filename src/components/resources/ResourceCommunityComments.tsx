@@ -131,7 +131,7 @@ export const ResourceCommunityComments: React.FC<ResourceCommunityCommentsProps>
     e.preventDefault();
     if (!user) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Authentication Required',
         message: 'Please sign in to share experiences or ask questions in this community sanctuary.'
       });
@@ -140,7 +140,7 @@ export const ResourceCommunityComments: React.FC<ResourceCommunityCommentsProps>
 
     if (!content.trim() || content.trim().length < 8) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Message Too Short',
         message: 'Please share at least a sentence (minimum 8 characters) to help your peers.'
       });
@@ -211,7 +211,7 @@ export const ResourceCommunityComments: React.FC<ResourceCommunityCommentsProps>
     e.preventDefault();
     if (!user) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Sign In Required',
         message: 'Please sign in to reply to peer questions or experiences.'
       });

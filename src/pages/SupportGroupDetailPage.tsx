@@ -66,7 +66,7 @@ export const SupportGroupDetailPage: React.FC = () => {
   const handleToggleAttend = () => {
     if (!user) {
       addToast({
-        type: 'warning',
+        type: 'info',
         title: 'Sign In Required',
         message: 'Please sign in to join support circles and track them in your profile commitments.'
       });
@@ -155,7 +155,7 @@ export const SupportGroupDetailPage: React.FC = () => {
           </div>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            <span>Facilitator: {group.facilitator}</span>
+            <span>Facilitator: {typeof group.facilitator === 'string' ? group.facilitator : group.facilitator?.name}</span>
           </div>
         </div>
       </div>
